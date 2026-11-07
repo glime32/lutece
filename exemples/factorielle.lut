@@ -1,0 +1,17 @@
+# Récursion : factorielle et Fibonacci
+fonction fact(n)
+    si n <= 1 alors
+        retourner 1
+    fin
+    retourner n * fact(n - 1)
+fin
+
+fonction fib(n)
+    si n < 2 alors retourner n fin
+    retourner fib(n - 1) + fib(n - 2)
+fin
+
+pour i de 0 à 20 faire
+    afficher i, "! =", fact(i)
+fin
+afficher "fib(30) =", fib(30)

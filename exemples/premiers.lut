@@ -1,0 +1,17 @@
+# Crible d'Ératosthène : les nombres premiers jusqu'à n
+fonction crible(n)
+    soit compose = tableau(n + 1)
+    soit compte = 0
+    pour i de 2 à n faire
+        si non compose[i] alors
+            compte = compte + 1
+            pour j de i * i à n pas i faire
+                compose[j] = vrai
+            fin
+        fin
+    fin
+    retourner compte
+fin
+
+afficher "il y a", crible(100), "nombres premiers jusqu'à 100"
+afficher "il y a", crible(10000000), "nombres premiers jusqu'à 10 millions"

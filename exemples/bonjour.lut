@@ -1,0 +1,4 @@
+# Le premier programme
+afficher "Bonjour, Lutèce !"
+soit x = 6 * 7
+afficher "la réponse est", x

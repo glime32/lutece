@@ -1,0 +1,7 @@
+# Plus de six arguments : les suivants passent par la pile
+fonction somme8(a, b, c, d, e, f, g, h)
+    retourner a + 2*b + 3*c + 4*d + 5*e + 6*f + 7*g + 8*h
+fin
+afficher somme8(1, 1, 1, 1, 1, 1, 1, 1)
+afficher somme8(1, 2, 3, 4, 5, 6, 7, 8) + somme8(8, 7, 6, 5, 4, 3, 2, 1)
+afficher (0 - 9223372036854775807 - 1) / (0 - 1)

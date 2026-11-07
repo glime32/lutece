@@ -1,0 +1,14 @@
+# La fonction d'Ackermann : récursive, et pas « primitive récursive »
+fonction ack(m, n)
+    si m == 0 alors
+        retourner n + 1
+    sinon si n == 0 alors
+        retourner ack(m - 1, 1)
+    sinon
+        retourner ack(m - 1, ack(m, n - 1))
+    fin
+fin
+
+pour m de 0 à 3 faire
+    afficher "m =", m, ": ack(m, 0..6) =", ack(m, 0), ack(m, 1), ack(m, 2), ack(m, 3), ack(m, 4), ack(m, 5), ack(m, 6)
+fin

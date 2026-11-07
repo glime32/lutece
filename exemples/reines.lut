@@ -1,0 +1,26 @@
+# Problème des n reines par retour sur trace (backtracking)
+fonction possible(col, ligne, n)
+    pour l de 0 à ligne - 1 faire
+        soit c = col[l]
+        si c == col[ligne] ou c - col[ligne] == l - ligne ou c - col[ligne] == ligne - l alors
+            retourner faux
+        fin
+    fin
+    retourner vrai
+fin
+
+fonction place(col, ligne, n)
+    si ligne == n alors retourner 1 fin
+    soit total = 0
+    pour c de 0 à n - 1 faire
+        col[ligne] = c
+        si possible(col, ligne, n) alors
+            total = total + place(col, ligne + 1, n)
+        fin
+    fin
+    retourner total
+fin
+
+pour n de 1 à 10 faire
+    afficher n, "reines :", place(tableau(n), 0, n), "solutions"
+fin

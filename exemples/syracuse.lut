@@ -1,0 +1,24 @@
+# Conjecture de Syracuse : le plus long vol en dessous d'un million
+fonction vol(n)
+    soit etapes = 0
+    tant que n != 1 faire
+        si n % 2 == 0 alors
+            n = n / 2
+        sinon
+            n = 3 * n + 1
+        fin
+        etapes = etapes + 1
+    fin
+    retourner etapes
+fin
+
+soit record = 0
+soit champion = 1
+pour depart de 1 à 999999 faire
+    soit v = vol(depart)
+    si v > record alors
+        record = v
+        champion = depart
+    fin
+fin
+afficher "le plus long vol sous un million part de", champion, ":", record, "étapes"
